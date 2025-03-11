@@ -1,0 +1,59 @@
+<section>
+    <div class="container-div">
+        <div class="positioned-div-row margin-btm">
+            <div class="positioned-text">
+                <h1 class="header-text">Welcome to our space!</h1>
+                <p class="secondary-text">
+                    Hi there! We’re Ameen Bari and Nagabhushan R, two passionate
+                    developers on a mission to build, create, and innovate. This website
+                    is a shared journey of our projects, ideas, and adventures. Feel free
+                    to explore and get to know us better!"
+                </p>
+            </div>
+            <div class="positioned-illustration">
+                <img class="img-cls" src="/test.svg" alt="" />
+                <a style="font-size: 10px; color: aliceblue;" href="https://storyset.com/people">People illustrations by Storyset</a>
+            </div>
+        </div>
+        <div class="positioned-div-col align-item-center" style="margin-bottom: 100px;">
+            <h1 class="header-text-2" style="margin-bottom: 100px" appFadeEffect [fadeInType]="'vertical'">
+                Checkout Our Profiles
+            </h1>
+            <div class="positioned-div-row gap">
+                <p-card header="Ameen Bari" subheader="Developer" [style]="{ width: '600px' }" appFadeEffect [fadeInType]="'horizontal'" [fadeInDirection]="'left'">
+                    <ng-template pTemplate="header">
+                        <img alt="Card" src="https://primefaces.org/cdn/primeng/images/card-ng.jpg" />
+                    </ng-template>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore
+                        sed consequuntur error repudiandae numquam deserunt quisquam
+                        repellat libero asperiores earum nam nobis, culpa ratione quam
+                        perferendis esse, cupiditate neque quas!
+                    </p>
+                    <ng-template pTemplate="footer">
+                        <div class="flex gap-3 mt-1">
+                            <p-speedDial [model]="items" direction="up" [radius]="80" type="semi-circle" buttonClassName="p-button-warning"/>
+                        </div>
+                    </ng-template>
+                </p-card>
+
+                <p-card header="Nagabhushan R" subheader="Associate Developer" [style]="{ width: '600px' }" appFadeEffect [fadeInType]="'horizontal'" [fadeInDirection]="'right'">
+                    <ng-template pTemplate="header">
+                        <img alt="Card" src="https://primefaces.org/cdn/primeng/images/card-ng.jpg" />
+                    </ng-template>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore
+                        sed consequuntur error repudiandae numquam deserunt quisquam
+                        repellat libero asperiores earum nam nobis, culpa ratione quam
+                        perferendis esse, cupiditate neque quas!
+                    </p>
+                    <ng-template pTemplate="footer">
+                        <div class="flex gap-3 mt-1">
+                            <p-speedDial [model]="items" direction="up" [radius]="100" type="semi-circle" buttonClassName="p-button-warning"/>
+                        </div>
+                    </ng-template>
+                </p-card>
+            </div>
+        </div>
+    </div>
+</section>
