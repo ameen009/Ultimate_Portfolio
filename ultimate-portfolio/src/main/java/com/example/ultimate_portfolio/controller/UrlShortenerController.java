@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.*;
 import java.net.URI;
 import java.util.Optional;
 
+@CrossOrigin(origins = "http://localhost:6200")
 @RestController
 @RequestMapping("/")
 public class UrlShortenerController {
@@ -19,7 +20,9 @@ public class UrlShortenerController {
     @PostMapping("/shorten")
     public ResponseEntity<String> shortenUrl(@RequestBody String longUrl) {
         String shortUrl = urlShortenerService.shortenUrl(longUrl);
-        return ResponseEntity.ok(shortUrl);
+        return ResponseEntity.ok()
+                .header("Content-Type", "text/plain")  // ✅ Ensure response is text/plain
+                .body(shortUrl);
     }
 
     // API to redirect to the original URL
