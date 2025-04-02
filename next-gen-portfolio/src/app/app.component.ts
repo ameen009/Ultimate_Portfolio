@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { NavComponent } from '../components/nav/nav.component';
-import { UrlShortnerComponent } from '../components/topics/url-shortner/url-shortner/url-shortner.component';
+import { UrlShortnerComponent } from '../components/topics/url-card/url-shortner/url-shortner.component';
 
 @Component({
   selector: 'app-root',
