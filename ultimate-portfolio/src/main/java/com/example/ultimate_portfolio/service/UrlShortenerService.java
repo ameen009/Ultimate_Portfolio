@@ -9,6 +9,7 @@ import java.nio.charset.StandardCharsets;
 import java.security.MessageDigest;
 import java.time.LocalDateTime;
 import java.util.Base64;
+import java.util.List;
 import java.util.Optional;
 
 @Service
@@ -42,6 +43,11 @@ public class UrlShortenerService {
     public Optional<String> getLongUrl(String shortId) {
         return repository.findById(shortId).map(ShortUrl::getLongUrl);
     }
+
+    public List<ShortUrl> getAllUrl(){
+        return repository.findAll();
+    }
+
 
     // Generate a short ID from the URL
     private String generateShortId(String url) {
