@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { CardModule } from 'primeng/card';
 import { OverlayPanelModule } from 'primeng/overlaypanel';
 import { DialogModule } from 'primeng/dialog';
@@ -13,6 +13,7 @@ import { Button } from 'primeng/button';
   styleUrl: './url-card.component.css'
 })
 export class UrlCardComponent {
+
   isModalOpen = false;
 
   openModal() {
