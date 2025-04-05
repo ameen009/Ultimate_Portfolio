@@ -21,4 +21,8 @@ export class UrlShortnerService {
   getAllUrls(): Observable<ShortUrl[]> {
     return this.http.get<ShortUrl[]>(this.apiUrlGetAll)
   }
+
+  deleteUrl(id: string): Observable<void> {
+    return this.http.delete<void>(`http://localhost:8080/${id}`);
+  }
 }

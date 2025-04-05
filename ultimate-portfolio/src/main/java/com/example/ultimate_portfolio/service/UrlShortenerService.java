@@ -48,6 +48,17 @@ public class UrlShortenerService {
         return repository.findAll();
     }
 
+    public void deleteUrl(String shortId){
+        Optional<ShortUrl> url = repository.findById(shortId);
+        if(url.isPresent()){
+            repository.deleteById(shortId);
+        } else {
+          throw new RuntimeException("Entity not found!");
+        }
+    }
+
+
+
 
     // Generate a short ID from the URL
     private String generateShortId(String url) {
