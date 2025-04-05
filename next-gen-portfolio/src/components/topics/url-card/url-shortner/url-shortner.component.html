@@ -1,3 +1,4 @@
+<p-toast position="top-center"></p-toast>
 <div class="container">
     <input type="text" [(ngModel)]="longUrl" placeholder="Enter URL here" />
     <button (click)="shortenUrl()">Shorten URL</button>
@@ -7,7 +8,7 @@
     </div>
   </div>
 
-  <div class="card" *ngIf="allUrls" style="padding-top: 30px;">
+  <div class="card" *ngIf="allUrls.length > 0" style="padding-top: 30px;">
     <p-table
         [value]="allUrls"
         [paginator]="true"
@@ -19,6 +20,7 @@
             <tr>
                 <th style="width:25%">Short urls</th>
                 <th style="width:25%">Description</th>
+                <th style="width: 25%;">Action</th>
             </tr>
         </ng-template>
         <ng-template pTemplate="body" let-url>
@@ -29,6 +31,12 @@
                   </a>
               </td>
               <td>{{url.longUrl}}</td>
+              <td><p-button
+                icon="pi pi-trash"
+                pTooltip="Delete"
+                tooltipPosition="top"
+                (click)="deleteUrl(url.id)" />
+              </td>
           </tr>
       </ng-template>
     </p-table>

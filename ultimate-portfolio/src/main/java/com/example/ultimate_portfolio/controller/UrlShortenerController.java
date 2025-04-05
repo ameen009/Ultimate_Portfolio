@@ -5,6 +5,7 @@ import com.example.ultimate_portfolio.entity.ShortUrl;
 import com.example.ultimate_portfolio.service.UrlShortenerService;
 import org.apache.coyote.Response;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -41,5 +42,15 @@ public class UrlShortenerController {
     public ResponseEntity<List<ShortUrl>> getAllUrl(){
         List<ShortUrl> response = urlShortenerService.getAllUrl();
         return ResponseEntity.ok(response);
+    }
+
+    @DeleteMapping("/{shortId}")
+    public ResponseEntity<Void> deleteShortUrl(@PathVariable String shortId){
+        try {
+            urlShortenerService.deleteUrl(shortId);
+            return ResponseEntity.noContent().build(); // 204 No Content
+        } catch (Exception e) {
+            return ResponseEntity.notFound().build(); // 500 on failure
+        }
     }
 }
