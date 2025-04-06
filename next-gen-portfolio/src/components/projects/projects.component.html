@@ -1,1 +1,8 @@
-<app-url-card></app-url-card>
+<div class="grid-container">
+    <!-- URL Sortner -->
+    <app-card title="URL Shortner" [status]="'Completed'" [viewType]="'Modal'">
+        <p description title="{{ getDescription('urlShortner') }}">{{ getDescription('urlShortner') }}</p>
+        <app-url-shortner content></app-url-shortner>
+    </app-card>
+    <!-- Rate Limitter -->
+</div>

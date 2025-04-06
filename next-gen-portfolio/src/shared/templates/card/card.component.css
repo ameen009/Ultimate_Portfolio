@@ -1,0 +1,26 @@
+.flex-header{
+	display: flex;
+	flex-direction: row;
+	column-gap: 3rem;
+}
+
+.status-tag{
+	position: relative;
+	top: 1.5rem;
+}
+
+.description{
+	display: -webkit-box;
+	-webkit-line-clamp: 3;
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.header{
+	display: inline-block;
+  	max-width: 200px;
+  	white-space: nowrap;
+  	overflow: hidden;
+  	text-overflow: ellipsis;
+}

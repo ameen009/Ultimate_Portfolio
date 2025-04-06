@@ -1,0 +1,25 @@
+<div class="col-span-12 md:col-span-4" style="padding-top: 20px;">
+    <p-card class="relative h-28 rounded-xl !p-4 w-[500px] flex items-center justify-center"  [style]="{ width: '360px' }">
+        <div class="flex-header">
+            <h2 class="header" title="{{title}}">{{ title }}</h2>
+            <p-tag [value]="status" class="status-tag" [rounded]="true" [severity]="getStatusSeverity(status)"></p-tag>
+        </div>
+        <p class="m-0 description">
+            <ng-content select="[description]"></ng-content>
+        </p>
+        <ng-template pTemplate="footer">
+            <div class="flex gap-3 mt-1">
+                <p-button label="View Demo" class="w-full" styleClass="w-full" (click)="dispatchAction()"/>
+            </div>
+        </ng-template>
+    </p-card>
+</div>
+
+<p-dialog [(visible)]="isModalOpen" [modal]="true" [style]="{ width: '80vw', height: '80vh' }">
+    <ng-template pTemplate="header">
+        <h2 class="text-lg font-semibold">{{ title }}</h2>
+    </ng-template>
+    <div class="p-4">
+        <ng-content select="[content]"></ng-content>
+    </div>
+</p-dialog>

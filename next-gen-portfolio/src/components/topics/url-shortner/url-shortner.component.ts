@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
-import { UrlShortnerService } from '../../../../service/url-shortner.service';
+import { UrlShortnerService } from '../../../service/url-shortner.service';
 import { NgIf } from '@angular/common';
 import {FormsModule} from '@angular/forms';
-import { ShortUrl } from '../../../../models/urlshortner.model';
+import { ShortUrl } from '../../../models/urlshortner.model';
 import { TableModule } from 'primeng/table';
 import { CommonModule } from '@angular/common';
 import { MessageService } from 'primeng/api';
