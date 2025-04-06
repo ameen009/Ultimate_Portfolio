@@ -2,11 +2,12 @@ import { Component } from '@angular/core';
 import { CardComponent } from '../../shared/templates/card/card.component';
 import { UrlShortnerComponent } from '../topics/url-shortner/url-shortner.component';
 import { ProjectDescription } from '../../shared/util/project-description';
+import { RateLimiterComponent } from '../topics/rate-limiter/rate-limiter.component';
 
 @Component({
   selector: 'app-projects',
   standalone: true,
-  imports: [CardComponent,UrlShortnerComponent],
+  imports: [CardComponent,UrlShortnerComponent,RateLimiterComponent],
   templateUrl: './projects.component.html',
   styleUrl: './projects.component.css'
 })

@@ -5,4 +5,8 @@
         <app-url-shortner content></app-url-shortner>
     </app-card>
     <!-- Rate Limitter -->
+     <app-card title="Rate Limiter" [status]="'InProgress'" [viewType]="'Modal'">
+        <p description title="{{ getDescription('rateLimiter') }}">{{ getDescription('rateLimiter') }}</p>
+        <app-rate-limiter content></app-rate-limiter>
+    </app-card>
 </div>
