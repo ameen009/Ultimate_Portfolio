@@ -1,3 +1,4 @@
+<!-- <app-collaborative-editor></app-collaborative-editor> -->
 <div class="grid-container">
     <!-- URL Sortner -->
     <app-card title="URL Shortner" [status]="'Completed'" [viewType]="'Modal'">
@@ -9,4 +10,11 @@
         <p description title="{{ getDescription('rateLimiter') }}">{{ getDescription('rateLimiter') }}</p>
         <app-rate-limiter content></app-rate-limiter>
     </app-card>
+    <!-- Collaborative editor -->
+    
+    <app-card title="Collaborative editor" [status]="'InProgress'" [viewType]="'Modal'">
+        <p description title="{{ getDescription('collaborativeEditor') }}">{{ getDescription('collaborativeEditor') }}</p>
+        <app-collaborative-editor content></app-collaborative-editor>
+    </app-card>
+    
 </div>

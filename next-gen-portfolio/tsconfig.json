@@ -2,7 +2,13 @@
 /* To learn more about Angular compiler options: https://angular.dev/reference/configs/angular-compiler-options. */
 {
   "compileOnSave": false,
+  "files": [
+  "src/window-global-fix.ts",
+  "src/main.ts"
+    ],
   "compilerOptions": {
+    "types": ["node"],
+    "allowSyntheticDefaultImports": true,
     "outDir": "./dist/out-tsc",
     "strict": true,
     "noImplicitOverride": true,
