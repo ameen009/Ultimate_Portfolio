@@ -1,0 +1,13 @@
+/* Add this to your component's CSS file or styles.scss */
+:host ::ng-deep .ql-container.ql-snow {
+    background-color: white;
+  }
+  
+  :host ::ng-deep .ql-toolbar.ql-snow {
+    background-color: #f8f8f8;
+    border-color: #ddd;
+  }
+  
+  :host ::ng-deep .ql-editor {
+    color: #333;
+  }

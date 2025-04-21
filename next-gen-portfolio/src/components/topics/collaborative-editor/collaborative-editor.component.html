@@ -1,0 +1,7 @@
+<quill-editor
+  [(ngModel)]="editorContent"
+  [modules]="editorModules"
+  (onContentChanged)="onTextChange($event)"
+  [style]="{ height: '100%', width: '100%' }"
+  theme="snow">
+</quill-editor>
